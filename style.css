@@ -1,194 +1,198 @@
 /* Сброс стилей */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 html,
 body {
   height: 100%;
 }
+/* Конец сброса стилей */
 /* Цвета и шрифты */
 body {
-    color: black;
-    text-align: center;
-    font-size: 24px;
-    line-height: 3;
+  color: black;
+  text-align: center;
+  font-size: 24px;
+  line-height: 3;
 }
 header {
-    color:rgb(87, 134, 134);
-    background: rgb(241, 185, 234);
-    min-height:50px;
-    font-size: 22px;
-    padding:5px;
-    display: flex;
-    text-align: left;
-    align-items: center;
+  color: rgb(87, 134, 134);
+  background: rgb(241, 185, 234);
+  font-size: 22px;
 }
-.header__nickname{
-    line-height: 1;
-    color:rgb(41, 61, 61);
+.header__nickname {
+  line-height: 1;
+  color: rgb(41, 61, 61);
 }
-.header__status{
-    font-size: 15px;
-    line-height: 1;
+.header__status {
+  font-size: 15px;
+  line-height: 1;
 }
 main {
-    background: url(background-chat.jpg) no-repeat;
-    background-size: cover;
-    min-width: calc(100% - 200px);
-    overflow-y: auto;
-    max-height: 100vh;
+  background: url(background-chat.jpg) no-repeat;
+  background-size: cover;
 }
-
-.main::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-.main::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-}
-.main::-webkit-scrollbar-thumb {
-    background-color: #dfdfdf;
-    border-radius: 10px;
-}
-.user-list {
-    order: 1;
-    flex: 0 0 200px;
-    height: 85%;
-    overflow-y: auto;
-}
-.user-list::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-.user-list::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-}
-.user-list::-webkit-scrollbar-thumb {
-    background-color: #dfdfdf;
-    border-radius: 10px;
-}
-.main__message{
-    display: flex;
-    margin-bottom: 10px;
-}
-.main__text{
-    background:rgba(238, 203, 203, 1);
-    border-radius: 15px;
+.main__text {
+  background: rgba(238, 203, 203, 1);
+  border-radius: 15px;
 }
 footer {
-    background: rgb(182, 171, 214);
-    min-height: 100px;
-    flex: 0 0 auto;
+  background: rgb(182, 171, 214);
+}
+.footer__input {
+  background: rgb(186, 203, 240);
 }
 .user-list {
-    background: rgb(168, 211, 255);
-    color:teal;
-    overflow-y: auto;
+  background: rgb(168, 211, 255);
+  color: teal;
 }
-.user-list__user{
-    display: flex;
-    padding: 10px;
+/* Конец цветов и шрифтов */
+/* Стили полос прокрутки */
+.main::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
-.user-list__content{
-    display: flex;
-    flex-flow: column;
-    font-size: 18px;
-    line-height: 1;
-    text-align: left;
+.main::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
-.footer__form{
-    display: flex;
-    height: 100%;
-    
+.main::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+  border-radius: 10px;
 }
-.user-list.open{
-    display: block;
-    position: absolute;
-    top:50px;
-    left: 0;
-    right: 0;
+.user-list::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
-.footer__input{
-    flex:1;
-    background:rgb(186, 203, 240);
-    border:none;
-    border-radius: 30px;
+.user-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
-.footer__input:active, :hover, :focus {
-    outline: 0;
-    border: none;
-    outline-offset: 0;
+.user-list::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+  border-radius: 10px;
 }
-.footer__button{
-    background:rgb(230, 180, 225);
-    border:none;
-    border-radius: 20px;
-    min-width: 60px;
-    
+/* Конец стилей прокрутки */
+/* Общие стили */
+header {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  padding: 5px;
 }
-.user-list{
-    display: none;
+.main__message {
+  display: flex;
+  margin-bottom: 10px;
 }
+.user-list__user {
+  display: flex;
+  padding: 10px;
+}
+.user-list__content {
+  display: flex;
+  flex-flow: column;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+}
+.footer__form {
+  display: flex;
+  height: 100%;
+}
+.footer__input {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  min-width: 0;
+}
+.footer__input:active,
+:hover,
+:focus {
+  outline: 0;
+  border: none;
+  outline-offset: 0;
+}
+.footer__button {
+  background: rgb(230, 180, 225);
+  border: none;
+  border-radius: 20px;
+  min-width: 60px;
+}
+/*Конец общих стилей */
 /* Мобильное представление */
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(50px, auto) minmax(0, auto) minmax(100px, auto);
+  overflow-y: auto;
+  height: 100%;
 }
-.burger-button{
-    display: flex;
-    justify-content: flex-start;
-    margin-right: 20px;
-    background:url(menu_icon.svg) center no-repeat;
-    width:28px;
-    height:20px;
-
+.user-list {
+  overflow-y: auto;
+  height: 50%;
+  display: none;
 }
-.burger-button.open{
-    background:url(menu_icon-close.svg) center no-repeat;
+.user-list.open {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
 }
+header {
+  grid-row: 1 / 2;
+}
+main {
+  grid-row: 2 / 3;
+  overflow-y: auto;
+}
+footer {
+  text-align: center;
+  grid-row: 3 / 4;
+}
+.burger-button {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 20px;
+  background: url(menu_icon.svg) center no-repeat;
+  width: 28px;
+  height: 20px;
+}
+.burger-button.open {
+  background: url(menu_icon-close.svg) center no-repeat;
+}
+/* Конец мобильного представления */
 /* Настольное представление */
-@media all and (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        flex-wrap: wrap;
-    } 
-    header, 
-    footer {
-        width: 100%;
-    }
-    .burger-button{
-        display: none;
-    }
-    .header__inner{
-        text-align: left;
-        padding-left: 200px;
-    }
-    .main {
-        flex: 1 0 auto;
-        order: 2;
-        max-height: 85%;
-    }
-    .user-list{
-        display: block;
-        width:200px;
-        order:1;
-    }
-    footer {
-        order: 3;
-        flex: 0 0 auto;
-        text-align: left;
-        padding: 0 10px 0 200px;
-    }
-    .footer__input{
-        padding: 0;
-        line-height: 1;
-    }
-    
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(10px, 200px) minmax(10px, 1fr);
+    grid-template-rows: min-content 1fr min-content;
+    gap: 1px;
+  }
+  header {
+    grid-column: 1 / -1;
+    padding-left: 200px;
+  }
+  .user-list {
+    display: block;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    overflow: auto;
+    height: 100%;
+  }
+  main {
+    grid-column: 2 / 3;
+    overflow: auto;
+  }
+  footer {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 0 10px 0 200px;
+  }
+  .burger-button {
+    display: none;
+  }
 }
-
+/* Конец настольного представления */
